@@ -1,11 +1,13 @@
 #container{
     border: 10px black solid;
     display: flex;
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content; */
+    min-width: 1080px;
+    min-height: 1080px;
+    /* height: fit-content; */
     align-self: center;
     justify-content: center;
-
+    flex-grow: inherit;
 }
 
 .board{
@@ -18,5 +20,4 @@
 }
 
 .createdBoxes{
-
 }
