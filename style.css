@@ -1,0 +1,15 @@
+#container{
+    border: 10px black solid;
+    display: flex;
+    /* margin: 100px; */
+
+}
+
+.page_title{
+    display: flex;
+    justify-content: center;
+}
+
+.createdBoxes{
+    /* margin: 10px; */
+}
