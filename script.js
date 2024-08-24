@@ -1,16 +1,17 @@
 function createSquares(){
+    let numberSquares = getNumber();
     const container = document.querySelector("#container");
     
-    for(var i = 0; i<16; i++){
+    for(var i = 0; i<numberSquares; i++){
         var div = document.createElement("div");
         div.setAttribute("style", "color: blue; background: white;")
         div.className = "createdBoxes";
         container.appendChild(div)
-        for(var j = 0; j <16; j++){
+        for(var j = 0; j <numberSquares; j++){
             var childDiv = document.createElement("div");
             childDiv.className = "createdBoxes";
             childDiv.setAttribute("style", "color: blue; background: white; border: black 1px solid;")
-            let padding = getPadding(16);
+            let padding = getPadding(numberSquares);
             childDiv.style.padding = padding;
             div.appendChild(childDiv);
             
@@ -25,4 +26,10 @@ function getPadding(squares){
     padding = String(paddingSize) + "px";
     console.log(padding);
     return padding;
+}
+
+function getNumber(){
+    var number =  parseInt(document.getElementById("squares").value);
+    console.log(number)
+    return number;
 }

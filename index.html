@@ -11,14 +11,19 @@
     <div class="page_title">
         <h1>Etch-A-Sketch</h1>
     </div>
+    <span>Enter the number of squares for length and width</span>
+    <input type="number" id="squares" min="1" max="64" value="16">
+    <button onclick="createSquares();">Enter</button>
     <div class="board">
+        
         <div id="container">
 
         </div>
     </div>
     
-    <script type="text/javascript">
-    createSquares();
-    </script>
+    <!-- <script type="text/javascript">
+        numberSquares = getNumber();
+        createSquares(numberSquares);
+    </script> -->
 </body>
 </html>
