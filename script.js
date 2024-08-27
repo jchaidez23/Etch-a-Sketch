@@ -20,10 +20,11 @@ function createSquares(){
         for(var j = 0; j <numberSquares; j++){
             var childDiv = document.createElement("div");
             childDiv.className = "createdBoxes";
-            childDiv.setAttribute("style", "color: blue; background: white; border: black 1px solid;")
+            // childDiv.setAttribute("style", "color: blue; background: white; border: black 0.1px solid;")
             let padding = getPadding(numberSquares);
             childDiv.style.width = padding;
             childDiv.style.height = padding;
+            // childDiv.style.padding = padding;
 
             div.appendChild(childDiv);
             
@@ -32,9 +33,10 @@ function createSquares(){
 }
 
 function getPadding(squares){
-    var area = 1080*1080;
+    var area = 1080;
     console.log(squares)
-    var paddingSize = Math.floor(area/(squares*squares))/100;
+    var paddingSize = Math.floor(area/squares);
+    padding = Math.floor(Math.sqrt(paddingSize));
     padding = String(paddingSize) + "px";
     console.log(padding);
     return padding;
