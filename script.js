@@ -24,6 +24,12 @@ function createSquares(){
             let padding = getPadding(numberSquares);
             childDiv.style.width = padding;
             childDiv.style.height = padding;
+            childDiv.addEventListener(
+                "mouseenter",
+                (event) => {
+                    event.target.style.backgroundColor = "black";
+                }
+            )
             // childDiv.style.padding = padding;
 
             div.appendChild(childDiv);
@@ -35,7 +41,7 @@ function createSquares(){
 function getPadding(squares){
     var area = 1080;
     console.log(squares)
-    var paddingSize = Math.floor(area/squares);
+    var paddingSize = Math.ceil(area/squares);
     padding = Math.floor(Math.sqrt(paddingSize));
     padding = String(paddingSize) + "px";
     console.log(padding);
@@ -46,4 +52,8 @@ function getNumber(){
     var number =  parseInt(document.getElementById("squares").value);
     console.log(number)
     return number;
+}
+
+function hover(){
+
 }
